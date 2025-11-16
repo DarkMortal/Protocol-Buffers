@@ -18,7 +18,7 @@ Protocol Buffer examples for Java, Python &amp; Javascript
 - Compilation
 
       protoc --proto_path=./classes --java_out=./compiled_classes/java ./classes/Person.proto ./classes/Job.proto
-- Copy the generated files to the java classpath of your project.
+- Copy the generated files into the source folder of your project.
 - Add the following maven dependency to your `pom.xml`.
 
       <dependency>
@@ -32,8 +32,16 @@ Protocol Buffer examples for Java, Python &amp; Javascript
 - Compilation
 
       protoc --proto_path=./classes --python_out=./compiled_classes/python ./classes/Person.proto ./classes/Job.proto
+- Copy the generated files to the source folder of your project.
+- Installation
+
+      pip3 install protobuf==3.20.*
 ## Using with javascript
 - Compilation
 
-      protoc --proto_path=./classes --js_out=./compiled_classes/javascript ./classes/Person.proto ./classes/Job.proto
+      protoc --proto_path=./classes --js_out=import_style=commonjs,binary:./compiled_classes/javascript ./classes/Person.proto ./classes/Job.proto
+- Copy the generated files to the source folder of your project.
+- Install the necessary package(s):
+
+      npm install google-protobuf
 ***

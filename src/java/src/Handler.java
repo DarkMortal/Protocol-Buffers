@@ -13,9 +13,11 @@ public class Handler {
 
         Person person = Person.newBuilder()
             .setId(1)
-            .setName("Saptarshi")
+            .setName("Saptarshi Dey")
             .setEmail("dragonbeast.saiyan@gmail.com")
             .setJob(job)
+            .addPhoneNumbers("+91-1234567890")   // Add repeated field
+            .addPhoneNumbers("+91-9876543210")   // Add multiple entries
             .build();
         
         byte[] data = person.toByteArray();
@@ -32,7 +34,7 @@ public class Handler {
 /*Output
 
 id: 1
-name: "Saptarshi"
+name: "Saptarshi Dey"
 email: "dragonbeast.saiyan@gmail.com"
 job {
   title: "Software Engineer"
@@ -40,5 +42,6 @@ job {
   salary: 120000
   type: FULL_TIME
 }
-
- */
+phone_numbers: "+91-1234567890"
+phone_numbers: "+91-9876543210"
+*/

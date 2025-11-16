@@ -1,0 +1,45 @@
+Binary serialized length: 117
+
+Deserialized (binary) object:
+id: 1
+name: "Saptarshi"
+email: "dragonbeast.saiyan@gmail.com"
+job {
+  title: "Software Engineer"
+  company: "Tech Mahindra"
+  salary: 120000
+  type: FULL_TIME
+}
+phone_numbers: "+91-1234567890"
+phone_numbers: "+91-9876543210"
+
+
+JSON representation:
+{
+  "id": 1,
+  "name": "Saptarshi",
+  "email": "dragonbeast.saiyan@gmail.com",
+  "job": {
+    "title": "Software Engineer",
+    "company": "Tech Mahindra",
+    "salary": 120000,
+    "type": "FULL_TIME"
+  },
+  "phoneNumbers": [
+    "+91-1234567890",
+    "+91-9876543210"
+  ]
+}
+
+Parsed from JSON back to object:
+id: 1
+name: "Saptarshi"
+email: "dragonbeast.saiyan@gmail.com"
+job {
+  title: "Software Engineer"
+  company: "Tech Mahindra"
+  salary: 120000
+  type: FULL_TIME
+}
+phone_numbers: "+91-1234567890"
+phone_numbers: "+91-9876543210"

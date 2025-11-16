@@ -1,0 +1,13 @@
+Deserialized Object: 
+{
+  id: 1,
+  name: 'Saptarshi Dey',
+  email: 'dragonbeast.saiyan@gmail.com',
+  job: {
+    title: 'Software Engineer',
+    company: 'Tech Mahindra',
+    salary: 120000,
+    type: 1
+  },
+  phoneNumbersList: [ '+91-9876543210', '+91-9123456789' ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "protobuff_example",
+  "version": "1.0.0",
+  "description": "An simple & easy to understand example for working with protocol buffers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saptarshi Dey",
+  "license": "MIT",
+  "dependencies": {
+    "google-protobuf": "^4.0.0"
+  }
+}

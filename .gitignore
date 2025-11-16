@@ -4,3 +4,10 @@ bin
 .project
 .settings
 target
+
+# for js
+node_modules
+
+# for python
+*.pyc
+__pycache__
