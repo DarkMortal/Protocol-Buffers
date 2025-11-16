@@ -1,0 +1,43 @@
+syntax = "proto3";  
+// The syntax declaration tells protoc that this file uses Protocol Buffers version 3.
+// This affects defaults, required/optional behavior, and field rules.
+
+package classes;  
+// Packages help avoid naming conflicts across different proto files.
+// This behaves similarly to namespaces in many languages.
+
+option java_package = "person";  
+// Specifies the Java package for generated Java classes.
+// Not required but strongly recommended for real projects.
+
+option java_multiple_files = true;  
+// Tells protoc to generate each message as a separate .java file.
+// Makes the Java codebase cleaner and easier to maintain.
+
+import "Job.proto";  
+// Import statements allow us to use messages defined in other .proto files.
+// Here, Person will reference Job.
+
+// Person message definition
+message Person {
+
+  // Field 1: Unique ID for a person
+  int32 id = 1;
+  // `int32` is efficient for numbers that fit 32 bits.
+  // The number after '=' is the field tag number—critical for binary encoding.
+
+  // Field 2: Full name of the person
+  string name = 2;
+  // Strings are UTF-8 encoded.
+
+  // Field 3: Email is optional — user may or may not provide it.
+  string email = 3;
+
+  // Field 4: The person's job information.
+  // This uses a message from Job.proto (composition).
+  Job job = 4;
+
+  // Field 5: A person can have multiple phone numbers.
+  // `repeated` turns this into a list.
+  repeated string phone_numbers = 5;
+}

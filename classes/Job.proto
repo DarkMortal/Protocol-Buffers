@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package classes;
+// Same package as Person.proto to keep things organized.
+
+option java_package = "job";
+option java_multiple_files = true;
+
+// Job message definition
+message Job {
+
+  // Field 1: Job title (e.g., Software Engineer)
+  string title = 1;
+
+  // Field 2: Company the person works at
+  string company = 2;
+
+  // Field 3: Person’s annual salary in USD
+  uint32 salary = 3;
+  // Using uint32 because salary cannot be negative.
+
+  // Field 4: Job type represented as an enumeration.
+  JobType type = 4;
+}
+
+// Enum for job categories
+enum JobType {
+  // Default zero value is mandatory in proto3.
+  JOB_TYPE_UNSPECIFIED = 0;
+
+  FULL_TIME = 1;
+  PART_TIME = 2;
+  INTERN = 3;
+  FREELANCE = 4;
+}
