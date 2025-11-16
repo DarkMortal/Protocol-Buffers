@@ -1,0 +1,6 @@
+# for java
+bin
+.classpath
+.project
+.settings
+target

@@ -18,6 +18,16 @@ Protocol Buffer examples for Java, Python &amp; Javascript
 - Compilation
 
       protoc --proto_path=./classes --java_out=./compiled_classes/java ./classes/Person.proto ./classes/Job.proto
+- Copy the generated files to the java classpath of your project.
+- Add the following maven dependency to your `pom.xml`.
+
+      <dependency>
+            <groupId>com.google.protobuf</groupId>
+            <artifactId>protobuf-java</artifactId>
+            <version>3.25.3</version>
+      </dependency>
+- In case of build errors (for eclipse), goto `project` → `properties` → `build path` and remove all the source folders.
+- After installing the dependencies, update the source folder (right click on `src` → `source` → `use as source path`) and build path as needed.
 ## Using with python
 - Compilation
 
